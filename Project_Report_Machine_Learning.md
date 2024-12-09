@@ -156,11 +156,11 @@ print("Accuracy:", accuracy_score(y_test, y_pred_mlp))
 ### **Hasil Evaluasi**
 Berikut adalah hasil evaluasi ketiga model:
 
-| Model                    | Accuracy | Macro Avg F1-Score |
-|--------------------------|----------|--------------------|
-| Decision Tree Classifier | 0.87     | 0.89               |
-| Gradient Boosting        | **0.91** | **0.92**           |
-| Neural Network (MLP)     | 0.88     | 0.90               |
+| Model                    | Accuracy | Macro Avg F1-Score | Weighted Avg F1-Score |
+|--------------------------|----------|--------------------|-----------------------|
+| Decision Tree Classifier | 0.87     | 0.89               | 0.87                  |
+| Gradient Boosting        | **0.91** | **0.92**           | **0.91**              |
+| Neural Network (MLP)     | 0.88     | 0.90               | 0.88                  |
 
 ### **Visualisasi Perbandingan Akurasi**
 
