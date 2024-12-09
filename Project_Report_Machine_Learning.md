@@ -109,9 +109,3 @@ Gradient Boosting Classifier adalah model terbaik dengan:
 ### **Rekomendasi**
 - Gradient Boosting Classifier dapat digunakan untuk memprediksi tingkat pengalaman anggota gym.
 - Untuk performa lebih tinggi, pertimbangkan **tuning hyperparameter** atau eksplorasi algoritma lain seperti XGBoost.
-
----
-
-### **Struktur dan Dokumentasi**
-- Laporan mengikuti struktur yang sesuai: Domain Proyek, Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation.
-- Semua langkah didukung dengan visualisasi, tabel, dan code snippet.
