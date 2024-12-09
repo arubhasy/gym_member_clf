@@ -95,7 +95,7 @@ Berikut adalah hasil evaluasi ketiga model:
 
 ### **Visualisasi Perbandingan Akurasi**
 
-![Perbandingan Akurasi]([https://via.placeholder.com/600x400](https://github.com/arubhasy/gym_member_clf/blob/a2a7c0161204e7525a6cfbd392f7e342ea0d896c/Model%20Accuracy.png))
+![Perbandingan Akurasi](https://github.com/arubhasy/gym_member_clf/blob/a2a7c0161204e7525a6cfbd392f7e342ea0d896c/Model%20Accuracy.png)
 
 ---
 
