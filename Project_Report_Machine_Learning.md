@@ -45,9 +45,17 @@ Kesehatan dan kebugaran merupakan aspek penting dalam gaya hidup modern. Gym ser
 
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
+```
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+sns.countplot(data['Experience_Level'])
+plt.title("Distribusi Tingkat Pengalaman")
+plt.xlabel("Experience Level")
+plt.ylabel("Jumlah Anggota")
+plt.show()
+```
 ![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
-![Distribusi Tingkat Pengalaman](https://github.com/arubhasy/gym_member_clf/blob/c63d5cf5af3e5eb6c3051810046dfbc4a0914ae4/Proportion%20of%20Experience%20Levels%202.png)
 ---
 
 ## **4. Data Preparation**
