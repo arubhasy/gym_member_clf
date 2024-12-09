@@ -93,17 +93,62 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
    - Parameter: Default.
    - Kelebihan: Interpretasi mudah.
    - Kekurangan: Rentan overfitting.
+   - Kode untuk Decision Tree Classifier:
+```
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+# Train model
+dt_model = DecisionTreeClassifier(random_state=42)
+dt_model.fit(X_train, y_train)
 
+# Predict
+y_pred_dt = dt_model.predict(X_test)
+
+# Evaluate
+print("Decision Tree Classifier:")
+print(classification_report(y_test, y_pred_dt))
+print("Accuracy:", accuracy_score(y_test, y_pred_dt))
+```
 2. **Gradient Boosting Classifier**:
    - Parameter: Default.
    - Kelebihan: Kinerja tinggi pada data beragam.
    - Kekurangan: Waktu komputasi lebih lama.
+   - Kode untuk Gradient Boosting Classifier:
+```
+from sklearn.ensemble import GradientBoostingClassifier
 
+# Train model
+gb_model = GradientBoostingClassifier(random_state=42)
+gb_model.fit(X_train, y_train)
+
+# Predict
+y_pred_gb = gb_model.predict(X_test)
+
+# Evaluate
+print("Gradient Boosting Classifier:")
+print(classification_report(y_test, y_pred_gb))
+print("Accuracy:", accuracy_score(y_test, y_pred_gb))
+```
 3. **Neural Network (MLP)**:
    - Parameter: Hidden layers (64, 32), max_iter=500.
    - Kelebihan: Menangkap pola kompleks.
    - Kekurangan: Memerlukan tuning untuk hasil optimal.
+   - Kode untuk Neural Network (MLP):
+```
+from sklearn.neural_network import MLPClassifier
 
+# Train model
+mlp_model = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+mlp_model.fit(X_train, y_train)
+
+# Predict
+y_pred_mlp = mlp_model.predict(X_test)
+
+# Evaluate
+print("Neural Network (MLP):")
+print(classification_report(y_test, y_pred_mlp))
+print("Accuracy:", accuracy_score(y_test, y_pred_mlp))
+```
 ---
 
 ## **6. Evaluation**
