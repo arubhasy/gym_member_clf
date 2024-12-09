@@ -67,7 +67,23 @@ plt.show()
    Data numerik dinormalisasi menggunakan **StandardScaler**.
 3. **Splitting**:
    Data dibagi menjadi **80% training** dan **20% testing**.
+```
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.model_selection import train_test_split
 
+# Encoding
+encoder = LabelEncoder()
+data['Gender'] = encoder.fit_transform(data['Gender'])
+
+# Normalisasi
+scaler = StandardScaler()
+X = scaler.fit_transform(data.drop('Experience_Level', axis=1))
+y = data['Experience_Level']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+```
 ---
 
 ## **5. Modeling**
