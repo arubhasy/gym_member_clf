@@ -15,7 +15,7 @@ Kesehatan dan kebugaran merupakan aspek penting dalam gaya hidup modern. Gym ser
 
 ### **Referensi**
 - Dataset: [Gym Members Exercise Dataset](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
-- Smith, J., et al. (2020). "The Impact of Personalized Training on Gym Member Retention." Journal of Fitness Analytics.
+- Lahti, H. (2023). Customer retention plan for a fitness center. [PDF](https://www.theseus.fi/bitstream/handle/10024/796190/Lahti_Hanna.pdf?sequence=3)
 
 ---
 
