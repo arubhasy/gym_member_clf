@@ -163,7 +163,20 @@ Berikut adalah hasil evaluasi ketiga model:
 | Neural Network (MLP)     | 0.88     | 0.90               | 0.88                  |
 
 ### **Visualisasi Perbandingan Akurasi**
+```
+# Plotting accuracy comparison
+models = ['Decision Tree', 'Gradient Boosting', 'Neural Network']
+accuracies = [
+    accuracy_score(y_test, y_pred_dt),
+    accuracy_score(y_test, y_pred_gb),
+    accuracy_score(y_test, y_pred_mlp)
+]
 
+plt.bar(models, accuracies)
+plt.ylabel("Accuracy")
+plt.title("Model Accuracy Comparison")
+plt.show()
+```
 ![Perbandingan Akurasi](https://github.com/arubhasy/gym_member_clf/blob/a2a7c0161204e7525a6cfbd392f7e342ea0d896c/Model%20Accuracy.png)
 
 ---
