@@ -46,7 +46,7 @@ Kesehatan dan kebugaran merupakan aspek penting dalam gaya hidup modern. Gym ser
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
 
-![Distribusi Target](https://drive.google.com/file/d/1LlKPLgNpk3C0OD4eWG2Mg5EmjBYiIKTL/view?usp=drive_link)
+![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
 
 ---
 
