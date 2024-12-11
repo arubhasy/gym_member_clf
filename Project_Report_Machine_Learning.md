@@ -56,6 +56,29 @@ plt.ylabel("Jumlah Anggota")
 plt.show()
 ```
 ![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
+
+### **Analisis Korelasi**
+Lakukan encoding pada variabel `Gender`, `Workout_Type`, dan `Experience_Level`:
+```
+from sklearn.preprocessing import LabelEncoder
+
+# Encoding untuk variabel Gender
+if 'Gender' in data.columns:
+    encoder = LabelEncoder()
+    data['Gender'] = encoder.fit_transform(data['Gender'])
+
+# Encoding untuk variabel Workout_Type
+if 'Workout_Type' in data.columns:
+    data['Workout_Type'] = encoder.fit_transform(data['Workout_Type'])
+
+# Encoding untuk variabel Experience_Level
+if 'Experience_Level' in data.columns:
+    encoder = LabelEncoder()
+    data['Experience_Level'] = encoder.fit_transform(data['Experience_Level'])
+```
+Korelasi mengukur hubungan linear antara dua variabel.
+Berikut adalah matriks korelasinya:
+
 ---
 
 ## **4. Data Preparation**
