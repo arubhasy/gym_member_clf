@@ -78,7 +78,9 @@ if 'Experience_Level' in data.columns:
 ```
 Korelasi mengukur hubungan linear antara dua variabel.
 Berikut adalah matriks korelasinya:
+
 ![Matriks Korelasi](https://github.com/arubhasy/gym_member_clf/blob/main/Korelasi%20Antar%20Variabel%20Numerik.png)
+
 ---
 
 ## **4. Data Preparation**
