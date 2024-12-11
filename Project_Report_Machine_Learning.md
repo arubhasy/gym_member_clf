@@ -6,7 +6,7 @@
 ## **1. Domain Proyek**
 
 ### **Latar Belakang**
-Kesehatan dan kebugaran merupakan aspek penting dalam gaya hidup modern. Gym sering menjadi pilihan utama untuk mencapai tujuan kebugaran. Namun, efektivitas latihan sangat tergantung pada pengalaman pengguna. Dengan memahami tingkat pengalaman anggota gym, pengelola dapat menawarkan program yang lebih personal dan meningkatkan kepuasan anggota.
+Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat yang tinggal di perkotaan, gym sering menjadi pilihan utama untuk mencapai tujuan kebugaran. Namun, efektivitas latihan sangat tergantung pada pengalaman pengguna. Dengan memahami tingkat pengalaman anggota gym, pengelola dapat menawarkan program yang lebih personal dan meningkatkan kepuasan anggota gym.
 
 ### **Mengapa Masalah Ini Penting?**
 1. Memberikan rekomendasi latihan yang lebih efektif.
@@ -156,11 +156,11 @@ print("Accuracy:", accuracy_score(y_test, y_pred_mlp))
 ### **Hasil Evaluasi**
 Berikut adalah hasil evaluasi ketiga model:
 
-| Model                    | Accuracy | Macro Avg F1-Score | Weighted Avg F1-Score |
-|--------------------------|----------|--------------------|-----------------------|
-| Decision Tree Classifier | 0.87     | 0.89               | 0.87                  |
-| Gradient Boosting        | **0.91** | **0.92**           | **0.91**              |
-| Neural Network (MLP)     | 0.88     | 0.90               | 0.88                  |
+| Model                    | Accuracy | Macro Avg F1-Score |
+|--------------------------|----------|--------------------|
+| Decision Tree Classifier | 0.87     | 0.89               |
+| Gradient Boosting        | **0.91** | **0.92**           |
+| Neural Network (MLP)     | 0.88     | 0.90               |
 
 ### **Visualisasi Perbandingan Akurasi**
 ```
