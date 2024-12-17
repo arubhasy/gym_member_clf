@@ -119,15 +119,18 @@ Setelah pengecekan, tidak ditemukan nilai hilang dan duplikasi.
 Pada variabel dg tipe data objek dan kategorik, tidak ditemukan anomali.
 
 **Outlier**
-Pada variabel dg tipe data numerik, ditemukan outlier melalui visualisasi box plot:
+Pada variabel dg tipe data numerik, ditemukan outlier melalui visualisasi box plot.
 
-Box Plot Variabel `Weights`
+Box Plot Variabel `Weights`:
+
 ![Boxplot Weights](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20Weight.png)
 
-Box Plot Variabel `Calories_Burned`
+Box Plot Variabel `Calories_Burned`:
+
 ![Boxplot Calories](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20Calories.png)
 
-Box Plot Variabel `BMI`
+Box Plot Variabel `BMI`:
+
 ![Boxplot BMI](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI.png)
 
 Persentase outlier pada setiap variabel adalah sbb:
