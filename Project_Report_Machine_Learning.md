@@ -108,6 +108,14 @@ Sedangkan jenis latihan yang **paling tidak populer** bagi member:
 Berikutnya kita telaah `Workout_Frequency` berdasarkan `Experience_Level`:
 ![Barplot Frekuensi Latihan Berdasarkan Pengalaman](https://github.com/arubhasy/gym_member_clf/blob/main/Barplot%20Frekuensi%20Latihan%20dan%20Pengalaman.png)
 
+Dapat dilihat bahwa semakin tinggi frekuensi latihan member, menunjukkan bahwa member tersebut semakin berpengalaman dalam latihan di gym.
+
+### **Kondisi Data**
+
+Setelah pengecekan, tidak ditemukan nilai hilang dan duplikasi. 
+
+
+
 ### **Analisis Korelasi**
 
 Korelasi mengukur hubungan linear antara dua variabel.
