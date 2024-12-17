@@ -149,6 +149,13 @@ Korelasi mengukur hubungan linear antara dua variabel, baik hubungan yang positi
 Setelah seluruh variabel bertipe numerik, selanjutnya kita hitung matriks korelasinya dan divisualisasikan menggunakan heatmap:
 ![Matriks Korelasi](https://github.com/arubhasy/gym_member_clf/blob/main/Korelasi%20Antar%20Variabel%20Numerik.png)
 
+Berikut terdapat beberapa insight yang menarik berdasarkan interpretasi matriks korelasi:
+- `Weight` memiliki korelasi positif yang sangat kuat dengan `BMI` (0.83), artinya semakin tinggi berat badan akan semakin tinggi juga BMI.
+- `Experience_Level` memiliki korelasi positif yang sangat kuat dengan `Workout_Frequency` (0.84), artinya semakin berpengalaman seseorang di gym akan semakin tinggi frekuensi latihannya.
+- `Session_Duration` memiliki korelasi positif yang sangat kuat dengan `Calories_Burned` (0.91), artinya semakin lama durasi workout akan semakin banyak kalori yang terbakar.
+
+Meskipun korelasi tinggi tidak selalu berarti terdapat hubungan sebab-akibat, tapi di sini kita dapat memperoleh insight yang cukup berharga dari data.
+
 ---
 
 ## **4. Data Preparation**
