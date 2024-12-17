@@ -92,15 +92,23 @@ Berdasarkan visualisasi dapat dilihat bahwa semakin lama durasi latihan, maka ak
 Berikutnya adalah visualisasi variabel dengan tipe data objek dan kategorik:
 ![Visualisasi Variabel dengan Tipe Data Objek dan Kategorik](https://github.com/arubhasy/gym_member_clf/blob/main/Visualisasi%20Data%20Kategorik%20dan%20Objek.png)
 
-### **Distribusi Target**
-Berikut adalah distribusi variabel `Experience_Level`:
-![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
+Kita telaah lebih lanjut pada variabel dg tipe data objek dan kategorik.
+
+Selanjutnya kita akan telaah tipe latihan yang populer di kalangan member laki-laki dan perempuan.
+![Pie Chart Tipe Latihan](https://github.com/arubhasy/gym_member_clf/blob/main/Pie%20Chart%20Jenis%20Latihan%20Berdasarkan%20Gender.png)
+
+Berdasarkan visualisasi pie chart, dapat dilihat bahwa jenis latihan yang paling populer bagi member:
+- Laki-laki: `Cardio`.
+- Perempuan: `Strength`.
+
+Sedangkan jenis latihan yang paling tidak populer bagi member:
+- Laki-laki: `Yoga`.
+- Perempuan: `HIIT`.
 
 ### **Analisis Korelasi**
 
 Korelasi mengukur hubungan linear antara dua variabel.
 Berikut adalah matriks korelasinya:
-
 ![Matriks Korelasi](https://github.com/arubhasy/gym_member_clf/blob/main/Korelasi%20Antar%20Variabel%20Numerik.png)
 
 ---
