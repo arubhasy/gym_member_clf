@@ -97,13 +97,16 @@ Kita telaah lebih lanjut pada variabel dg tipe data objek dan kategorik.
 Selanjutnya kita akan telaah tipe latihan yang populer di kalangan member laki-laki dan perempuan.
 ![Pie Chart Tipe Latihan](https://github.com/arubhasy/gym_member_clf/blob/main/Pie%20Chart%20Jenis%20Latihan%20Berdasarkan%20Gender.png)
 
-Berdasarkan visualisasi pie chart, dapat dilihat bahwa jenis latihan yang paling populer bagi member:
+Berdasarkan visualisasi pie chart, dapat dilihat bahwa jenis latihan yang **paling populer** bagi member:
 - Laki-laki: `Cardio`.
 - Perempuan: `Strength`.
 
-Sedangkan jenis latihan yang paling tidak populer bagi member:
+Sedangkan jenis latihan yang **paling tidak populer** bagi member:
 - Laki-laki: `Yoga`.
 - Perempuan: `HIIT`.
+
+Berikutnya kita telaah `Workout_Frequency` berdasarkan `Experience_Level`:
+![Barplot Frekuensi Latihan Berdasarkan Pengalaman](https://github.com/arubhasy/gym_member_clf/blob/main/Barplot%20Frekuensi%20Latihan%20dan%20Pengalaman.png)
 
 ### **Analisis Korelasi**
 
