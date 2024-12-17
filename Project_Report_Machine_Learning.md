@@ -39,8 +39,24 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 
 ### **Informasi Dataset**
 - **Sumber Data**: [Kaggle](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
-- **Jumlah Data**: 973 sampel.
-- **Fitur Input**: Usia, berat badan, tinggi badan, detak jantung maksimum, durasi sesi latihan, jenis latihan, dll.
+- **Jumlah Data**:
+   - Jumlah Baris: 973
+   - Jumlah Kolom: 15
+- **Fitur Input**:
+   - `Age`
+   - `Gender`
+   - `Weight (kg)`
+   - `Height (m)`
+   - `Max_BPM`
+   - `Avg_BPM`
+   - `Resting_BPM`
+   - `Session_Duration (hours)`
+   - `Calories_Burned`
+   - `Workout_Type`
+   - `Fat_Percentage`
+   - `Water_Intake (liters)`
+   - `Workout_Frequency (days/week)`
+   - `BMI`
 - **Variabel Target**: `Experience_Level` (1: Pemula, 2: Menengah, 3: Ahli).
 
 ### **Distribusi Target**
