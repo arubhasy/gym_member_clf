@@ -138,10 +138,6 @@ Persentase outlier pada setiap variabel adalah sbb:
 - Outlier pada variabel `Calories_Burned` = 1.03%
 - Outlier pada variabel `BMI` = 2.57%
 
-Karena outlier secara persentase cukup kecil, maka diputuskan untuk menghapus nilai outlier pada ketiga variabel tersebut.
-
-Setelah drop outlier, terdapat 948 entri data dari semula 973 entri. Artinya terdapat 25 entri yang didrop.
-
 ### **Analisis Korelasi**
 
 Korelasi mengukur hubungan linear antara dua variabel, baik hubungan yang positif maupun negatif. Namun sebelumnya, kita lakukan encoding terlebih dahulu dengan ubah tipe data objek dan kategorik menjadi numerik. Hal ini perlu dilakukan karena perhitungan matriks korelasi hanya dapat dilakukan terhadap data numerik.
@@ -161,12 +157,47 @@ Meskipun korelasi tinggi tidak selalu berarti terdapat hubungan sebab-akibat, ta
 ## **4. Data Preparation**
 
 ### **Langkah-Langkah**
-1. **Encoding**:
-   Variabel kategorikal seperti `Gender` diubah menjadi numerik menggunakan Label Encoding.
-2. **Normalisasi**:
-   Data numerik dinormalisasi menggunakan **StandardScaler**.
-3. **Splitting**:
-   Data dibagi menjadi **80% training** dan **20% testing**.
+1. **Handling Missing Values**
+2. **Handling Duplicate Values**
+3. **Handling Outlier**
+4. **Encoding Variabel Kategorik**
+5. **Normalisasi Data Numerik**
+6. **Data Splitting**
+7. **Finalisasi Data**
+
+### Handling Missing Values
+Pastikan dataset tidak memiliki missing values atau tidak ada nilai yang kosong (NaN). Berdasarkan hasil telaah data, tidak ditemukan missing values. Dengan demikian, penanganan missing values tidak dilakukan.
+
+### Handling Duplicate Values
+Pastikan dataset tidak memiliki duplicate values atau duplikasi entri data. Berdasarkan hasil telaah data, tidak ditemukan duplicate values. Dengan demikian, penanganan duplicate values tidak dilakukan.
+
+### Handling Outliers
+Berdasarkan telaah data, terdapat outlier pada variabel:
+- Outlier pada variabel `Weights` = 0.92%
+- Outlier pada variabel `Calories_Burned` = 1.03%
+- Outlier pada variabel `BMI` = 2.57%
+
+Karena outlier secara persentase cukup kecil, maka diputuskan untuk menghapus nilai outlier pada ketiga variabel tersebut. Setelah drop outlier, terdapat 948 entri data dari semula 973 entri. Artinya terdapat 25 entri yang didrop.
+
+### Encoding Variabel Kategorik
+Encoding bertujuan untuk mengubah variabel kategorikal menjadi format numerik agar dapat diproses oleh algoritma machine learning. Terdapat 2 variabel yang dikonversi menjadi numerik:
+- `Gender`
+- `Workout_Type`
+
+### Normalisasi Data Numerik
+Setelah seluruh tipe data dikonversi menjadi numerik, selanjutnya dilakukan normalisasi agar semua fitur numerik memiliki skala yang seragam. Data diubah ke distribusi dengan rata-rata 0 dan deviasi standar 1. Hal ini dilakukan agar dapat mempercepat proses pelatihan model dan mencegah fitur dengan nilai besar mendominasi perhitungan.
+
+### Data Splitting
+Splitting bertujuan untuk membagi dataset menjadi data training dan testing untuk memastikan evaluasi yang adil. Setelah melakukan pemisahan antara fitur (X) dan variabel target (y), dataset dibagi menjadi dua bagian: data training (80%) dan data testing (20%). 
+
+Data training digunakan untuk melatih model dan data testing digunakan untuk mengukur performa model terhadap data baru. Hal ini perlu dilakukan untuk memastikan model dapat dievaluasi pada data yang belum pernah dilihat sebelumnya untuk menghindari overfitting (model hanya bekerja baik pada data training tetapi buruk pada data baru).
+
+### Finalisasi Data
+Setelah semua langkah di atas, dataset sudah siap untuk digunakan dalam proses pemodelan:
+- Fitur numerik telah dinormalisasi.
+- Variabel kategorikal telah di-encode.
+- Data training dan testing telah dipisahkan.
+
 ```
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
