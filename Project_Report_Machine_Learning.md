@@ -112,14 +112,35 @@ Dapat dilihat bahwa semakin tinggi frekuensi latihan member, menunjukkan bahwa m
 
 ### **Kondisi Data**
 
+**Missing & Duplicate Value**
 Setelah pengecekan, tidak ditemukan nilai hilang dan duplikasi. 
 
+**Data Anomali**
+Pada variabel dg tipe data objek dan kategorik, tidak ditemukan anomali.
 
+**Outlier**
+Pada variabel dg tipe data numerik, ditemukan outlier melalui visualisasi box plot:
+Box Plot Variabel `Weights`
+![Boxplot Weights](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20Weight.png)
+Box Plot Variabel `Calories_Burned`
+![Boxplot Calories](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20Calories.png)
+Box Plot Variabel `BMI`
+![Boxplot BMI](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI.png)
+
+Persentase outlier pada setiap variabel adalah sbb:
+- Outlier pada variabel `Weights` = 0.92%
+- Outlier pada variabel `Calories_Burned` = 1.03%
+- Outlier pada variabel `BMI` = 2.57%
+
+Karena outlier secara persentase cukup kecil, maka diputuskan untuk menghapus nilai outlier pada ketiga variabel tersebut.
+
+Setelah drop outlier, terdapat 948 entri data dari semula 973 entri. Artinya terdapat 25 entri yang didrop.
 
 ### **Analisis Korelasi**
 
-Korelasi mengukur hubungan linear antara dua variabel.
-Berikut adalah matriks korelasinya:
+Korelasi mengukur hubungan linear antara dua variabel, baik hubungan yang positif maupun negatif. Namun sebelumnya, kita lakukan encoding terlebih dahulu dengan ubah tipe data objek dan kategorik menjadi numerik. Hal ini perlu dilakukan karena perhitungan matriks korelasi hanya dapat dilakukan terhadap data numerik.
+
+Setelah seluruh variabel bertipe numerik, selanjutnya kita hitung matriks korelasinya dan divisualisasikan menggunakan heatmap:
 ![Matriks Korelasi](https://github.com/arubhasy/gym_member_clf/blob/main/Korelasi%20Antar%20Variabel%20Numerik.png)
 
 ---
