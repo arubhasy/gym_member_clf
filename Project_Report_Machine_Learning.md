@@ -85,7 +85,7 @@ Selanjutnya kita tampilkan visualisasi variabel `Water_Intake` dan `Gender`:
 Berdasarkan visualisasi, terlihat bahwa member laki-laki lebih banyak konsumsi air dibandingkan member perempuan.
 
 Berikutnya kita tampilkan visualisasi `Session_Duration` dan `Calories_Burned`:
-![Visualisasi Session_Duration dan Calories_Burned](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
+![Visualisasi Session_Duration dan Calories_Burned](https://github.com/arubhasy/gym_member_clf/blob/main/Scatterplot%20Session%20Duration%20dan%20Calories%20Burned.png)
 
 Berdasarkan visualisasi dapat dilihat bahwa semakin lama durasi latihan, maka akan semakin besar kalori yang terbakar.
 
