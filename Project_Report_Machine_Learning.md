@@ -67,6 +67,18 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 Untuk lebih memahami distribusi data numerik, berikut visualisasi data numeriknya:
 ![Visualisasi Data Numerik](https://github.com/arubhasy/gym_member_clf/blob/main/Distribusi%20Data%20Numerik.png)
 
+Dari histogram, terlihat beberapa variabel yg memiliki distribusi normal dan miring (skew).
+
+Terlihat juga ada 2 variabel numerik yang lebih cocok bila dikonversi menjadi tipe data kategorik, yaitu `Workout_Frequency` dan `Experience_Level`.
+
+Berikut visualisasi data numerik setelah konversi tipe data:
+![Visualisasi Data Numerik Setelah Konversi](https://github.com/arubhasy/gym_member_clf/blob/main/Distribusi%20Data%20Numerik%20Setelah%20Konversi.png)
+
+Selanjutnya kita tampilkan visualisasi `BMI` berdasarkan `Gender`:
+![Visualisasi BMI Berdasarkan Gender](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
+
+Terlihat dari visualisasi boxplot, member laki-laki memiliki kecenderungan overweight karena median BMI > 25. Sedangkan member perempuang memiliki kecenderungan BMI normal.
+
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
 ![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
