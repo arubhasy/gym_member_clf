@@ -348,8 +348,30 @@ Kelemahan MLP Classifier
 ---
 
 ## **6. Evaluation**
+Pada tahap ini akan dilakukan evaluasi terhadap performa dari model Decision Tree Classifier, Gradient Boosting, dan MLP menggunakan:
+- Confusion Matrix
+- Nilai accuaracy dan macro average F1-Score
+- Visualisasi accuaracy dan macro average F1-Score
+- Feature Importance
 
-### **Hasil Evaluasi**
+### **Confusion Matrix**
+
+Berikut adalah perbandingan visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
+
+![Confusion Matrix DT](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix%20DT.png)
+
+![Confusion Matrix GB](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix%20GB.png)
+
+![Confusion Matrix MLP](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix%20MLP.png)
+
+Berdasarkan perbandingan ketiga confusion matriks, dapat dilihat bahwa:
+- DT Classifier melakukan prediksi secara benar sebanyak 158 dan salah prediksi sebanyak 32.
+- GB Classifier melakukan prediksi secara benar sebanyak 171 dan salah prediksi sebanyak 19.
+- MLP Classifier melakukan prediksi secara benar sebanyak 161 dan salah prediksi sebanyak 29.
+
+Berdasarkan perbandingan confusion matrix, dapat disimpulkan bahwa model Gradient Boosting Classifier berhasil melakukan perdiksi secara benar lebih banyak dibandingkan kedua model lainnya dan model juga memiliki kesalahan prediksi yang paling sedikit.
+
+### **Nilai accuaracy dan macro average F1-Score**
 Berikut adalah hasil evaluasi ketiga model:
 
 | Model                    | Accuracy | Macro Avg F1-Score |
@@ -360,28 +382,72 @@ Berikut adalah hasil evaluasi ketiga model:
 
 Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Gradient Boosting memiliki performa terbaik dibandingkan kedua model lainnya.
 
-### **Visualisasi Perbandingan Akurasi**
+### **Visualisasi accuaracy dan macro average F1-Score**
 
-Berikut adalah visualisasi perbandingan akurasi model Decision Tree Classifier, Gradient Boosting, dan MLP:
+Berikut adalah visualisasi perbandingan accuracy dan macro average F1-Score model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
-![Perbandingan Akurasi](https://github.com/arubhasy/gym_member_clf/blob/a2a7c0161204e7525a6cfbd392f7e342ea0d896c/Model%20Accuracy.png)
+![Perbandingan Akurasi](https://github.com/arubhasy/gym_member_clf/blob/main/Accuracy.png)
 
-Secara visual dapat dipastikan bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
+Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
 
-### **Visualisasi Confusion Matrix**
+### **Feature Importance**
+Feature importance membantu dalam memahami fitur yang memiliki pengaruh besar terhadap model.
 
-Berikut adalah perbandingan visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
+Berikut Feature Importance model Decision Tree Classifier:
+![Feature Importance DT](https://github.com/arubhasy/gym_member_clf/blob/main/Feature%20Importance%20DT.png)
 
-![Confusion Matrix](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix.png)
+Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
+- `Workout_Type`
+- `Water_Intake`
+- `Resting_BPM`
+
+Berikut Feature Importance model Gradient Boosting Classifier:
+![Feature Importance GB](https://github.com/arubhasy/gym_member_clf/blob/main/Feature%20Importance%20GB.png)
+
+Pada model GB Classifier, top 3 fitur yang memiliki pengaruh besar:
+- `Water_Intake`
+- `Resting_BPM`
+- `Workout_Type`
+
+Neural Network (seperti MLP) tidak secara langsung memberikan metrik pentingnya fitur (feature importance) karena struktur jaringannya berbasis lapisan tersembunyi (hidden layers) dengan bobot dan bias yang terdistribusi di antara banyak unit
 
 ---
 
 ## **7. Kesimpulan**
 
-### **Model Terbaik**
-Gradient Boosting Classifier adalah model terbaik dengan:
-- **Akurasi**: 0.91
-- **Macro Avg F1-Score**: 0.92
+### **Perbandingan Kinerja Model**
+
+**1. Decision Tree Classifier**
+   - Accuracy: 0.83
+   - Macro Avg F1-Score: 0.86
+   - Kelebihan:
+      - Kinerja sangat baik pada kelas minoritas (kelas 2) dengan F1-Score 1.00.
+   - Kekurangan:
+      - Sedikit lebih lemah pada kelas mayoritas (kelas 0 dan 1) dibanding model lain.
+
+**2. Gradient Boosting Classifier**
+   - Accuracy: 0.90
+   - Macro Avg F1-Score: 0.92
+   - Kelebihan:
+      - Kinerja terbaik secara keseluruhan pada kelas mayoritas (kelas 0 dan 1)
+      - Konsistensi tinggi pada semua metrik.
+   - Kekurangan:
+   - Tidak ada kelemahan yang mencolok.
+
+**3. Neural Network (MLP)**
+   - Accuracy: 0.85
+   - Macro Avg F1-Score: 0.87
+   - Kelebihan:
+      - Performanya mendekati Gradient Boosting, dengan hasil yang sangat baik pada semua kelas.
+      - Lebih sederhana untuk memproses pola non-linear dalam dataset.
+   - Kekurangan:
+      - Kinerja keseluruhan sedikit lebih rendah dibanding Gradient Boosting.
+
+### **Kesimpulan**
+Model terbaik adalah Gradient Boosting Classifier karena:
+- Memiliki akurasi tertinggi (0.90).
+- Memiliki macro average F1-Score tertinggi (0.92).
+- Konsistensi kinerjanya tinggi di semua kelas.
 
 ### **Rekomendasi**
 - Gradient Boosting Classifier dapat digunakan untuk memprediksi tingkat pengalaman anggota gym.
