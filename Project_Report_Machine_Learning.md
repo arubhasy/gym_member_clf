@@ -253,15 +253,97 @@ Decision Tree Classifier adalah algoritma machine learning berbasis pohon yang d
    - Untuk membuat prediksi, input data dilewatkan dari root node ke leaf node mengikuti aturan keputusan yang telah dibuat.
    - Leaf node memberikan label kelas sebagai prediksi akhir.
 
+**Keunggulan dan Kelemahan**
+Keunggulan Decision Tree
+- Mudah Dipahami: Struktur pohon memungkinkan interpretasi yang intuitif.
+- Non-linear Relationship: Dapat menangkap hubungan non-linear antara fitur dan target.
+- Tidak Membutuhkan Scaling: Fitur tidak perlu dinormalisasi atau di-standardisasi.
+
+Kelemahan Decision Tree
+- Overfitting: Pohon yang terlalu dalam dapat mempelajari noise dari data.
+- Kurang Stabil: Perubahan kecil pada data dapat menyebabkan perubahan besar pada struktur pohon.
+- Bias Fitur: Decision Tree cenderung memilih fitur dengan banyak nilai unik sebagai pemisah pertama.
+
 ### Gradient Boosting Classifier
-   - Parameter: Default.
-   - Kelebihan: Kinerja tinggi pada data beragam.
-   - Kekurangan: Waktu komputasi lebih lama.
+Gradient Boosting Classifier adalah algoritma machine learning berbasis ensemble yang digunakan untuk menyelesaikan masalah klasifikasi. Algoritma ini bekerja dengan membangun serangkaian weak learners (biasanya pohon keputusan dengan kedalaman rendah) secara bertahap dalam sebuah proses iteratif. Setiap model bertujuan memperbaiki kesalahan dari model sebelumnya.
+
+**Konsep Dasar**
+1. Ensemble Model:
+   - Gradient Boosting menggabungkan beberapa model sederhana (weak learners) menjadi satu model kuat.
+   - Biasanya, model dasar yang digunakan adalah Decision Tree dengan kedalaman rendah (stump).
+2. Boosting:
+   - Boosting adalah teknik ensemble yang melatih model secara berurutan.
+   - Setiap model baru berfokus untuk memperbaiki kesalahan prediksi dari model sebelumnya.
+3. Gradient Descent:
+   - Gradient Boosting menggunakan gradient descent untuk mengoptimalkan fungsi loss (loss function).
+   - Model bekerja dengan mengurangi selisih antara prediksi dan target dengan menyesuaikan bobot weak learners.
+
+**Langkah Kerja**
+1. Inisialisasi Model
+   - Model pertama memprediksi nilai awal yang paling sederhana (misalnya rata-rata atau nilai default).
+   - Residual error (selisih antara nilai aktual dan prediksi awal)   - 
+2. Pembangunan Weak Learners
+   - Pada setiap iterasi, pohon keputusan kecil (weak learner) dibangun untuk memprediksi residual error dari model sebelumnya.
+   - Pohon ini berfungsi untuk menemukan pola kesalahan yang belum dipelajari.
+3. Update Model
+   - Model yang baru ditambahkan ke ensemble dengan bobot tertentu untuk meminimalkan loss function.
+   - Formula pembaruan prediksi adalah:
+
+![Update formula](https://doimages.nyc3.cdn.digitaloceanspaces.com/010AI-ML/content/images/2019/11/image-43.png)
+
+   - Di mana:
+   - Fm(x): Prediksi pada iterasi ke-m
+   - Fm-1(x): Prediksi pada iterasi sebelumnya
+   - v: Learning rate (untuk mengontrol besarnya langkah update)
+
+4. Iterasi Hingga Konvergensi
+   - Proses diulangi beberapa kali dengan menambahkan weak learners hingga model mencapai konvergensi atau jumlah iterasi maksimum tercapai.
+   - Residual error berkurang di setiap iterasi sehingga prediksi semakin mendekati target aktual.
+
+**Keunggulan dan Kelemahan**
+Keunggulan Gradient Boosting
+- Performa Tinggi: Sangat efektif untuk data yang kompleks.
+- Fleksibilitas: Mendukung berbagai fungsi loss (klasifikasi, regresi).
+- Kontrol Overfitting: Dengan parameter seperti learning rate dan max depth.
+
+Kelemahan Gradient Boosting
+- Lambat: Pelatihan bisa memakan waktu karena proses iteratif.
+- Sensitif terhadap Outlier: Model bisa dipengaruhi oleh data outlier.
+- Tuning Parameter: Membutuhkan tuning parameter agar performanya optimal.
 
 ### Neural Network (MLP)
-   - Parameter: Hidden layers (64, 32), max_iter=500.
-   - Kelebihan: Menangkap pola kompleks.
-   - Kekurangan: Memerlukan tuning untuk hasil optimal.
+MLP Classifier (Multi-Layer Perceptron) adalah jenis neural network yang digunakan untuk klasifikasi dalam machine learning. MLP bekerja dengan cara menyebarkan input melalui lapisan-lapisan jaringan saraf (neural network) untuk menghasilkan prediksi. MLP termasuk dalam algoritma supervised learning, yang mempelajari hubungan antara input dan output berdasarkan data latih.
+
+**Konsep Dasar**
+MLP memiliki tiga komponen utama:
+- Input Layer: Menerima fitur dari dataset.
+- Hidden Layers: Lapisan tersembunyi di mana komputasi non-linear dilakukan melalui aktivasi neuron.
+- Output Layer: Menghasilkan prediksi dalam bentuk probabilitas atau kelas target.
+
+**Langkah Kerja**
+1. Forward Propagation
+   - Forward propagation adalah proses menyebarkan input dari lapisan input ke lapisan output melalui lapisan tersembunyi.
+2. Fungsi Aktivasi
+   - Fungsi aktivasi menambahkan non-linearitas ke jaringan, sehingga jaringan mampu menangkap pola yang kompleks.
+3. Loss Function
+   - Loss function mengukur perbedaan antara prediksi model dan nilai aktual. Untuk klasifikasi, loss function yang umum digunakan adalah Cross-Entropy Loss.
+4. Backpropagation
+   - Backpropagation adalah proses menghitung gradien dari loss function terhadap bobot jaringan saraf menggunakan aturan rantai (chain rule).
+   - Gradien ini digunakan untuk memperbarui bobot dan bias agar error menjadi minimal.
+5. Training dan Konvergensi
+   - Proses forward propagation dan backpropagation diulang selama beberapa iterasi (epochs).
+   - Model dilatih hingga fungsi loss konvergen (menjadi minimal).
+
+**Keunggulan dan Kelemahan**
+Kelebihan MLP Classifier
+- Dapat Menangkap Pola Non-Linear: MLP sangat baik dalam memodelkan hubungan kompleks.
+- Fleksibilitas: Dapat digunakan untuk klasifikasi multi-kelas dan regresi.
+- Kinerja Tinggi: Dengan tuning parameter yang tepat, MLP dapat mencapai hasil yang baik.
+
+Kelemahan MLP Classifier
+- Waktu Komputasi Lama: Jaringan saraf memerlukan banyak iterasi untuk konvergen.
+- Memerlukan Normalisasi Data: MLP sensitif terhadap skala fitur.
+- Tuning Parameter: Perlu hyperparameter tuning seperti jumlah hidden layers dan learning rate untuk performa optimal.
 
 ---
 
@@ -276,22 +358,21 @@ Berikut adalah hasil evaluasi ketiga model:
 | Gradient Boosting        | **0.91** | **0.92**           |
 | Neural Network (MLP)     | 0.88     | 0.90               |
 
-### **Visualisasi Perbandingan Akurasi**
-```
-# Plotting accuracy comparison
-models = ['Decision Tree', 'Gradient Boosting', 'Neural Network']
-accuracies = [
-    accuracy_score(y_test, y_pred_dt),
-    accuracy_score(y_test, y_pred_gb),
-    accuracy_score(y_test, y_pred_mlp)
-]
+Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Gradient Boosting memiliki performa terbaik dibandingkan kedua model lainnya.
 
-plt.bar(models, accuracies)
-plt.ylabel("Accuracy")
-plt.title("Model Accuracy Comparison")
-plt.show()
-```
+### **Visualisasi Perbandingan Akurasi**
+
+Berikut adalah visualisasi perbandingan akurasi model Decision Tree Classifier, Gradient Boosting, dan MLP:
+
 ![Perbandingan Akurasi](https://github.com/arubhasy/gym_member_clf/blob/a2a7c0161204e7525a6cfbd392f7e342ea0d896c/Model%20Accuracy.png)
+
+Secara visual dapat dipastikan bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
+
+### **Visualisasi Confusion Matrix**
+
+Berikut adalah perbandingan visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
+
+![Confusion Matrix](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix.png)
 
 ---
 
