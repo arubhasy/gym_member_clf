@@ -43,20 +43,29 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
    - Jumlah Kolom: 15
 - **Fitur Input**:
    - `Age`: usia gym member.
-   - `Gender`: jenis kelamin gym member (`Male`, `Female`).
-   - `Weight (kg)`
-   - `Height (m)`
-   - `Max_BPM`
-   - `Avg_BPM`
-   - `Resting_BPM`
-   - `Session_Duration (hours)`
-   - `Calories_Burned`
-   - `Workout_Type`
-   - `Fat_Percentage`
-   - `Water_Intake (liters)`
-   - `Workout_Frequency (days/week)`
-   - `BMI`
-- **Variabel Target**: `Experience_Level` (`1`: Pemula, `2`: Menengah, `3`: Ahli).
+   - `Gender`: jenis kelamin member (`Male`, `Female`).
+   - `Weight (kg)`: berat badan member dalam kilogram.
+   - `Height (m)`: tinggi badan member dalam kilogram.
+   - `Max_BPM`: denyut jantung maksimum selama latihan (beats per minute).
+   - `Avg_BPM`: denyut jantung rata-rata selama latihan (beats per minute).
+   - `Resting_BPM`: denyut jantung saat istirahat sebelum istirahat.
+   - `Session_Duration (hours)`: durasi setiap sesi latihan dalam jam.
+   - `Calories_Burned`: total kalori yang terbakar selama setiap sesi.
+   - `Workout_Type`: jenis latihan yang dilakukan (`Cardio`, `Strength`, `Yoga`, `HIIT`).
+   - `Fat_Percentage`: persentase lemak tubuh anggota.
+   - `Water_Intake (liters)`: asupan air harian selama latihan.
+   - `Workout_Frequency (days/week)`: jumlah sesi latihan per minggu.
+   - `BMI`: Body Mass Index, dihitung dari tinggi dan berat badan.
+- **Variabel Target**:
+   - `Experience_Level`: Tingkat pengalaman member (`1`: Pemula, `2`: Menengah, `3`: Ahli).
+- **Tipe Data**:
+   - Numerik: 13
+   - Objek: 2
+
+### **Telaah Data**
+
+Untuk lebih memahami distribusi data numerik, berikut visualisasi data numeriknya:
+![Visualisasi Data Numerik](https://github.com/arubhasy/gym_member_clf/blob/main/Distribusi%20Data%20Numerik.png)
 
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
