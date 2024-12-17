@@ -184,8 +184,10 @@ Encoding bertujuan untuk mengubah variabel kategorikal menjadi format numerik ag
 - `Gender`
 - `Workout_Type`
 
+Setelah proses encoding, kondisi data seluruhnya berubah menjadi numerik.
+
 ### Normalisasi Data Numerik
-Setelah seluruh tipe data dikonversi menjadi numerik, selanjutnya dilakukan normalisasi agar semua fitur numerik memiliki skala yang seragam. Data diubah ke distribusi dengan rata-rata 0 dan deviasi standar 1. Hal ini dilakukan agar dapat mempercepat proses pelatihan model dan mencegah fitur dengan nilai besar mendominasi perhitungan.
+Setelah seluruh tipe data dikonversi menjadi numerik, selanjutnya dilakukan normalisasi agar semua fitur numerik memiliki skala yang seragam. Menggunakan **StandarScaler**, seluruh data diubah ke distribusi dengan rata-rata 0 dan deviasi standar 1. Hal ini dilakukan agar dapat mempercepat proses pelatihan model dan mencegah fitur dengan nilai besar mendominasi perhitungan.
 
 ### Data Splitting
 Splitting bertujuan untuk membagi dataset menjadi data training dan testing untuk memastikan evaluasi yang adil. Setelah melakukan pemisahan antara fitur (X) dan variabel target (y), dataset dibagi menjadi dua bagian: data training (80%) dan data testing (20%). 
@@ -194,92 +196,59 @@ Data training digunakan untuk melatih model dan data testing digunakan untuk men
 
 ### Finalisasi Data
 Setelah semua langkah di atas, dataset sudah siap untuk digunakan dalam proses pemodelan:
+- Data sudah bersih (tidak ada missing values, duplicate values, anomali dan outlier).
 - Fitur numerik telah dinormalisasi.
 - Variabel kategorikal telah di-encode.
 - Data training dan testing telah dipisahkan.
 
-```
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.model_selection import train_test_split
-
-# Encoding
-encoder = LabelEncoder()
-data['Gender'] = encoder.fit_transform(data['Gender'])
-
-# Normalisasi
-scaler = StandardScaler()
-X = scaler.fit_transform(data.drop('Experience_Level', axis=1))
-y = data['Experience_Level']
-
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-```
 ---
 
 ## **5. Modeling**
 
 ### **Model yang Digunakan**
-1. **Decision Tree Classifier**:
-   - Parameter: Default.
-   - Kelebihan: Interpretasi mudah.
-   - Kekurangan: Rentan overfitting.
-   - Kode untuk Decision Tree Classifier:
-```
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, ConfusionMatrixDisplay
-# Train model
-dt_model = DecisionTreeClassifier(random_state=42)
-dt_model.fit(X_train, y_train)
+Pada project ini kita gunakan 3 model klasifikasi berikut:
+1. Decision Tree Classifier
+2. Gradient Boosting Classifier
+3. Neural Network (MLP)
 
-# Predict
-y_pred_dt = dt_model.predict(X_test)
+### Decision Tree Classifier
+Decision Tree Classifier adalah algoritma machine learning berbasis pohon yang digunakan untuk menyelesaikan masalah klasifikasi dengan memisahkan dataset ke dalam subset berdasarkan aturan keputusan (decision rules). Model ini membangun struktur pohon dari atas ke bawah melalui proses pembagian fitur (splitting) yang optimal.
 
-# Evaluate
-print("Decision Tree Classifier:")
-print(classification_report(y_test, y_pred_dt))
-print("Accuracy:", accuracy_score(y_test, y_pred_dt))
-```
-2. **Gradient Boosting Classifier**:
+**Konsep Dasar**
+1. Struktur Pohon:
+   - Root Node: Node pertama yang mewakili fitur awal untuk membagi dataset.
+   - Internal Nodes: Node yang berisi keputusan untuk memisahkan data lebih lanjut.
+   - Leaf Nodes: Node akhir yang mewakili kelas atau label prediksi.
+2. Pembagian Dataset (Splitting):
+   - Proses memisahkan dataset berdasarkan fitur yang menghasilkan pemisahan terbaik (optimal split).
+   - Algoritma mencari fitur yang meminimalkan ketidaksamaan data setelah pemisahan.
+3. Aturan Keputusan (Decision Rules):
+   - Setiap node internal menggunakan aturan berbasis fitur 
+
+**Langkah Kerja**
+1. Pemilihan Fitur Terbaik (Splitting Criterion)
+   - Pada setiap node, algoritma memilih fitur yang paling baik memisahkan data berdasarkan **impurity** (ketidaksamaan data) atau **information gain**.
+   - Beberapa metode untuk mengukur pemisahan optimal:
+   - Gini Index
+     ![Gini Index](https://miro.medium.com/v2/resize:fit:640/format:webp/1*vRlwRFknvfgWLBed1vsGoQ.jpeg)
+   - Entropy (Information Gain)
+     ![Entropy](https://miro.medium.com/v2/resize:fit:640/format:webp/1*efLrD1ECWl-utII0KYb7tQ.jpeg)
+2. Pembagian Dataset
+
+3. Pembangunan Pohon Secara Rekursif
+
+4. Prediksi
+
+### Gradient Boosting Classifier
    - Parameter: Default.
    - Kelebihan: Kinerja tinggi pada data beragam.
    - Kekurangan: Waktu komputasi lebih lama.
-   - Kode untuk Gradient Boosting Classifier:
-```
-from sklearn.ensemble import GradientBoostingClassifier
 
-# Train model
-gb_model = GradientBoostingClassifier(random_state=42)
-gb_model.fit(X_train, y_train)
-
-# Predict
-y_pred_gb = gb_model.predict(X_test)
-
-# Evaluate
-print("Gradient Boosting Classifier:")
-print(classification_report(y_test, y_pred_gb))
-print("Accuracy:", accuracy_score(y_test, y_pred_gb))
-```
-3. **Neural Network (MLP)**:
+### Neural Network (MLP)
    - Parameter: Hidden layers (64, 32), max_iter=500.
    - Kelebihan: Menangkap pola kompleks.
    - Kekurangan: Memerlukan tuning untuk hasil optimal.
-   - Kode untuk Neural Network (MLP):
-```
-from sklearn.neural_network import MLPClassifier
 
-# Train model
-mlp_model = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
-mlp_model.fit(X_train, y_train)
-
-# Predict
-y_pred_mlp = mlp_model.predict(X_test)
-
-# Evaluate
-print("Neural Network (MLP):")
-print(classification_report(y_test, y_pred_mlp))
-print("Accuracy:", accuracy_score(y_test, y_pred_mlp))
-```
 ---
 
 ## **6. Evaluation**
