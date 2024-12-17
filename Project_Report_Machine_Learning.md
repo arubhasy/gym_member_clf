@@ -79,6 +79,16 @@ Selanjutnya kita tampilkan visualisasi `BMI` berdasarkan `Gender`:
 
 Terlihat dari visualisasi boxplot, member laki-laki memiliki kecenderungan overweight karena median BMI > 25. Sedangkan member perempuang memiliki kecenderungan BMI normal. (Referensi: [Calculate Your Body Mass Index](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/))
 
+Selanjutnya kita tampilkan visualisasi variabel `Water_Intake` dan `Gender`:
+![Visualisasi Water Intake Berdasarkan Gender](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
+
+Berdasarkan visualisasi, terlihat bahwa member laki-laki lebih banyak konsumsi air dibandingkan member perempuan.
+
+Berikutnya kita tampilkan visualisasi `Session_Duration` dan `Calories_Burned`:
+![Visualisasi Session_Duration dan Calories_Burned](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
+
+Berdasarkan visualisasi dapat dilihat bahwa semakin lama durasi latihan, maka akan semakin besar kalori yang terbakar.
+
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
 ![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
