@@ -37,13 +37,13 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 ## **3. Data Understanding**
 
 ### **Informasi Dataset**
-- **Dataset**: [Gym Members Exercise Dataset](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
+- **Dataset**: [Gym Members Exercise Dataset (Kaggle)](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
 - **Jumlah Data**:
    - Jumlah Baris: 973
    - Jumlah Kolom: 15
 - **Fitur Input**:
-   - `Age`
-   - `Gender`
+   - `Age`: usia gym member.
+   - `Gender`: jenis kelamin gym member (`Male`, `Female`).
    - `Weight (kg)`
    - `Height (m)`
    - `Max_BPM`
@@ -56,7 +56,7 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
    - `Water_Intake (liters)`
    - `Workout_Frequency (days/week)`
    - `BMI`
-- **Variabel Target**: `Experience_Level` (1: Pemula, 2: Menengah, 3: Ahli).
+- **Variabel Target**: `Experience_Level` (`1`: Pemula, `2`: Menengah, `3`: Ahli).
 
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
