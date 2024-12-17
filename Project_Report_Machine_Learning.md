@@ -394,6 +394,7 @@ Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli perform
 Feature importance membantu dalam memahami fitur yang memiliki pengaruh besar terhadap model.
 
 Berikut Feature Importance model Decision Tree Classifier:
+
 ![Feature Importance DT](https://github.com/arubhasy/gym_member_clf/blob/main/Feature%20Importance%20DT.png)
 
 Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
@@ -402,6 +403,7 @@ Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
 - `Resting_BPM`
 
 Berikut Feature Importance model Gradient Boosting Classifier:
+
 ![Feature Importance GB](https://github.com/arubhasy/gym_member_clf/blob/main/Feature%20Importance%20GB.png)
 
 Pada model GB Classifier, top 3 fitur yang memiliki pengaruh besar:
