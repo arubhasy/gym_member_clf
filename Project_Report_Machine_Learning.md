@@ -89,6 +89,9 @@ Berikutnya kita tampilkan visualisasi `Session_Duration` dan `Calories_Burned`:
 
 Berdasarkan visualisasi dapat dilihat bahwa semakin lama durasi latihan, maka akan semakin besar kalori yang terbakar.
 
+Berikutnya adalah visualisasi variabel dengan tipe data objek dan kategorik:
+![Visualisasi Variabel dengan Tipe Data Objek dan Kategorik](https://github.com/arubhasy/gym_member_clf/blob/main/Visualisasi%20Data%20Kategorik%20dan%20Objek.png)
+
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
 ![Distribusi Target](https://github.com/arubhasy/gym_member_clf/blob/main/Proportion%20of%20Experience%20Levels.png)
