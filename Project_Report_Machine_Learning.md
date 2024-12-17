@@ -14,7 +14,6 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 3. Mengoptimalkan data untuk analisis yang mendalam.
 
 ### **Referensi**
-- Dataset: [Gym Members Exercise Dataset](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
 - Lahti, H. (2023). [Customer retention plan for a fitness center](https://www.theseus.fi/bitstream/handle/10024/796190/Lahti_Hanna.pdf?sequence=3).
 
 ---
@@ -38,7 +37,7 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 ## **3. Data Understanding**
 
 ### **Informasi Dataset**
-- **Sumber Data**: [Kaggle](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
+- **Dataset**: [Gym Members Exercise Dataset](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
 - **Jumlah Data**:
    - Jumlah Baris: 973
    - Jumlah Kolom: 15
