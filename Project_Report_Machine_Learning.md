@@ -232,14 +232,22 @@ Decision Tree Classifier adalah algoritma machine learning berbasis pohon yang d
    - Gini Index:
      
      ![Gini Index](https://miro.medium.com/v2/resize:fit:640/format:webp/1*vRlwRFknvfgWLBed1vsGoQ.jpeg)
+     Di mana pi adalah probabilitas sebuah data jatuh ke kelas i.
    - Entropy (Information Gain):
      
      ![Entropy](https://miro.medium.com/v2/resize:fit:640/format:webp/1*efLrD1ECWl-utII0KYb7tQ.jpeg)
+     Entropy mengukur ketidakpastian pada node; semakin kecil entropy, semakin baik pemisahan.
 2. Pembagian Dataset
-
+   - Setelah fitur terbaik dipilih, dataset dipisahkan menjadi dua subset berdasarkan nilai threshold fitur tersebut.
+   - Proses ini dilakukan secara rekursif di setiap cabang pohon.
 3. Pembangunan Pohon Secara Rekursif
-
+   - Algoritma melanjutkan pembagian hingga kondisi stop terpenuhi, yaitu:
+      - Semua data dalam node memiliki label yang sama (pure node).
+      - Tidak ada fitur yang tersisa untuk membagi data.
+      - Kedalaman maksimum pohon telah tercapai (max_depth).
 4. Prediksi
+   - Untuk membuat prediksi, input data dilewatkan dari root node ke leaf node mengikuti aturan keputusan yang telah dibuat.
+   - Leaf node memberikan label kelas sebagai prediksi akhir.
 
 ### Gradient Boosting Classifier
    - Parameter: Default.
