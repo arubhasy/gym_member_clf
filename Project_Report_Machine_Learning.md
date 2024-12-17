@@ -77,7 +77,9 @@ Berikut visualisasi data numerik setelah konversi tipe data:
 Selanjutnya kita tampilkan visualisasi `BMI` berdasarkan `Gender`:
 ![Visualisasi BMI Berdasarkan Gender](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
 
-Terlihat dari visualisasi boxplot, member laki-laki memiliki kecenderungan overweight karena median BMI > 25. Sedangkan member perempuang memiliki kecenderungan BMI normal.
+Terlihat dari visualisasi boxplot, member laki-laki memiliki kecenderungan overweight karena median BMI > 25. Sedangkan member perempuang memiliki kecenderungan BMI normal. (![Referensi: Calculate Your Body Mass Index](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/))
+
+
 
 ### **Distribusi Target**
 Berikut adalah distribusi variabel `Experience_Level`:
