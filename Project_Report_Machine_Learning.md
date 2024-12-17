@@ -229,9 +229,11 @@ Decision Tree Classifier adalah algoritma machine learning berbasis pohon yang d
 1. Pemilihan Fitur Terbaik (Splitting Criterion)
    - Pada setiap node, algoritma memilih fitur yang paling baik memisahkan data berdasarkan **impurity** (ketidaksamaan data) atau **information gain**.
    - Beberapa metode untuk mengukur pemisahan optimal:
-   - Gini Index
+   - Gini Index:
+   - 
      ![Gini Index](https://miro.medium.com/v2/resize:fit:640/format:webp/1*vRlwRFknvfgWLBed1vsGoQ.jpeg)
-   - Entropy (Information Gain)
+   - Entropy (Information Gain):
+   - 
      ![Entropy](https://miro.medium.com/v2/resize:fit:640/format:webp/1*efLrD1ECWl-utII0KYb7tQ.jpeg)
 2. Pembagian Dataset
 
