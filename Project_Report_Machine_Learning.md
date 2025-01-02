@@ -414,7 +414,7 @@ Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Grad
 
 Berikut adalah visualisasi perbandingan accuracy dan macro average F1-Score model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
-![image](https://github.com/user-attachments/assets/f20b32ba-65a9-432c-9f0c-49b734aaf927)
+![image](https://github.com/user-attachments/assets/7c194a6a-4913-4ea7-8361-eadef5efcfeb)
 
 Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
 
@@ -423,12 +423,11 @@ Feature importance membantu dalam memahami fitur yang memiliki pengaruh besar te
 
 Berikut Feature Importance model Decision Tree Classifier:
 
-![image](https://github.com/user-attachments/assets/43de2143-b7bd-4e82-8f56-1e6d76b9e754)
+![image](https://github.com/user-attachments/assets/e6bcec3f-0fe5-4cdf-b6e7-9b6506b4eb57)
 
 Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
 - `Workout_Type`
 - `Water_Intake`
-- `Resting_BPM`
 
 Berikut Feature Importance model Gradient Boosting Classifier:
 
