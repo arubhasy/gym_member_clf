@@ -427,7 +427,9 @@ Pada tahap ini akan dilakukan evaluasi terhadap performa dari model Decision Tre
 
 ### **Confusion Matrix**
 
-Berikut adalah perbandingan visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
+Confusion matrix dari setiap model dibandingkan untuk membantu memahami bagaimana masing-masing model mengklasifikasikan data. Dari matriks ini dapat diketahui seberapa baik model dalam melakukan prediksi, termasuk kesalahan prediksi.
+
+Berikut adalah visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
 ![image](https://github.com/user-attachments/assets/9611a5ac-d9f1-4b4c-9aea-750fef50cea1)
 
