@@ -67,36 +67,36 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 Untuk lebih memahami distribusi data numerik, berikut visualisasi data numeriknya:
 ![image](https://github.com/user-attachments/assets/14168e67-ad4a-414c-b71d-a256c346057e)
 
-
 Dari histogram, terlihat beberapa variabel yg memiliki distribusi normal dan miring (skew).
 
 Terlihat juga ada 2 variabel numerik yang lebih cocok bila dikonversi menjadi tipe data kategorik, yaitu `Workout_Frequency` dan `Experience_Level`.
 
 Berikut visualisasi data numerik setelah konversi tipe data:
-![Visualisasi Data Numerik Setelah Konversi](https://github.com/arubhasy/gym_member_clf/blob/main/Distribusi%20Data%20Numerik%20Setelah%20Konversi.png)
+![image](https://github.com/user-attachments/assets/71ae5025-8626-4e16-ba65-b0e580d056f0)
+
 
 Selanjutnya kita tampilkan visualisasi `BMI` berdasarkan `Gender`:
-![Visualisasi BMI Berdasarkan Gender](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
+![image](https://github.com/user-attachments/assets/e4623f99-8bb2-4f18-9347-449b4fde8f84)
 
 Terlihat dari visualisasi boxplot, member laki-laki memiliki kecenderungan overweight karena median BMI > 25. Sedangkan member perempuang memiliki kecenderungan BMI normal. (Referensi: [Calculate Your Body Mass Index](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/))
 
 Selanjutnya kita tampilkan visualisasi variabel `Water_Intake` dan `Gender`:
-![Visualisasi Water Intake Berdasarkan Gender](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI%20Berdasarkan%20Gender.png)
+![image](https://github.com/user-attachments/assets/1aec58a1-3c3b-4ff0-9cae-873fa50c6450)
 
 Berdasarkan visualisasi, terlihat bahwa member laki-laki lebih banyak konsumsi air dibandingkan member perempuan.
 
 Berikutnya kita tampilkan visualisasi `Session_Duration` dan `Calories_Burned`:
-![Visualisasi Session_Duration dan Calories_Burned](https://github.com/arubhasy/gym_member_clf/blob/main/Scatterplot%20Session%20Duration%20dan%20Calories%20Burned.png)
+![image](https://github.com/user-attachments/assets/f594c6cc-10f0-4e96-b0b0-799777f444ea)
 
 Berdasarkan visualisasi dapat dilihat bahwa semakin lama durasi latihan, maka akan semakin besar kalori yang terbakar.
 
 Berikutnya adalah visualisasi variabel dengan tipe data objek dan kategorik:
-![Visualisasi Variabel dengan Tipe Data Objek dan Kategorik](https://github.com/arubhasy/gym_member_clf/blob/main/Visualisasi%20Data%20Kategorik%20dan%20Objek.png)
+![image](https://github.com/user-attachments/assets/645c41e6-dac4-45d1-b6bb-c2ca1f7990c9)
 
 Kita telaah lebih lanjut pada variabel dg tipe data objek dan kategorik.
 
 Selanjutnya kita akan telaah tipe latihan yang populer di kalangan member laki-laki dan perempuan.
-![Pie Chart Tipe Latihan](https://github.com/arubhasy/gym_member_clf/blob/main/Pie%20Chart%20Jenis%20Latihan%20Berdasarkan%20Gender.png)
+![image](https://github.com/user-attachments/assets/cf5d6174-03fc-4e2e-8910-d476e2e7b836)
 
 Berdasarkan visualisasi pie chart, dapat dilihat bahwa jenis latihan yang **paling populer** bagi member:
 - Laki-laki: `Cardio`.
@@ -107,7 +107,7 @@ Sedangkan jenis latihan yang **paling tidak populer** bagi member:
 - Perempuan: `HIIT`.
 
 Berikutnya kita telaah `Workout_Frequency` berdasarkan `Experience_Level`:
-![Barplot Frekuensi Latihan Berdasarkan Pengalaman](https://github.com/arubhasy/gym_member_clf/blob/main/Barplot%20Frekuensi%20Latihan%20dan%20Pengalaman.png)
+![image](https://github.com/user-attachments/assets/35a797b7-99f8-4c36-9185-5ef82fd1e436)
 
 Dapat dilihat bahwa semakin tinggi frekuensi latihan member, menunjukkan bahwa member tersebut semakin berpengalaman dalam latihan di gym.
 
@@ -123,16 +123,13 @@ Pada variabel dg tipe data objek dan kategorik, tidak ditemukan anomali.
 Pada variabel dg tipe data numerik, ditemukan outlier melalui visualisasi box plot.
 
 Box Plot Variabel `Weights`:
-
-![Boxplot Weights](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20Weight.png)
+![image](https://github.com/user-attachments/assets/7762f4df-9208-479f-9c5f-ddda42bd82cb)
 
 Box Plot Variabel `Calories_Burned`:
-
-![Boxplot Calories](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20Calories.png)
+![image](https://github.com/user-attachments/assets/56ce8984-a7b0-44bd-a195-6c935eb33f1f)
 
 Box Plot Variabel `BMI`:
-
-![Boxplot BMI](https://github.com/arubhasy/gym_member_clf/blob/main/Boxplot%20BMI.png)
+![image](https://github.com/user-attachments/assets/67eb1e27-a2d4-4edb-ab65-a2791dfeecb4)
 
 Persentase outlier pada setiap variabel adalah sbb:
 - Outlier pada variabel `Weights` = 0.92%
@@ -144,7 +141,7 @@ Persentase outlier pada setiap variabel adalah sbb:
 Korelasi mengukur hubungan linear antara dua variabel, baik hubungan yang positif maupun negatif. Namun sebelumnya, kita lakukan encoding terlebih dahulu dengan ubah tipe data objek dan kategorik menjadi numerik. Hal ini perlu dilakukan karena perhitungan matriks korelasi hanya dapat dilakukan terhadap data numerik.
 
 Setelah seluruh variabel bertipe numerik, selanjutnya kita hitung matriks korelasinya dan divisualisasikan menggunakan heatmap:
-![Matriks Korelasi](https://github.com/arubhasy/gym_member_clf/blob/main/Korelasi%20Antar%20Variabel%20Numerik.png)
+![image](https://github.com/user-attachments/assets/3358b8d6-906b-4359-9466-19f4ffa66d00)
 
 Berikut terdapat beberapa insight yang menarik berdasarkan interpretasi matriks korelasi:
 - `Weight` memiliki korelasi positif yang sangat kuat dengan `BMI` (0.83), artinya semakin tinggi berat badan akan semakin tinggi juga BMI.
@@ -358,12 +355,11 @@ Pada tahap ini akan dilakukan evaluasi terhadap performa dari model Decision Tre
 ### **Confusion Matrix**
 
 Berikut adalah perbandingan visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
+![image](https://github.com/user-attachments/assets/aaa5acd8-f3b8-4285-861f-785224b9f4e0)
 
-![Confusion Matrix DT](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix%20DT.png)
+![image](https://github.com/user-attachments/assets/a7a90e7d-415f-40e1-9001-b4944fa8fad0)
 
-![Confusion Matrix GB](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix%20GB.png)
-
-![Confusion Matrix MLP](https://github.com/arubhasy/gym_member_clf/blob/main/Confusion%20Matrix%20MLP.png)
+![image](https://github.com/user-attachments/assets/a9d256dc-d66d-4a7a-a93e-bb6f7edb33ba)
 
 Berdasarkan perbandingan ketiga confusion matriks, dapat dilihat bahwa:
 - DT Classifier melakukan prediksi secara benar sebanyak 158 dan salah prediksi sebanyak 32.
@@ -386,8 +382,7 @@ Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Grad
 ### **Visualisasi accuaracy dan macro average F1-Score**
 
 Berikut adalah visualisasi perbandingan accuracy dan macro average F1-Score model Decision Tree Classifier, Gradient Boosting, dan MLP:
-
-![Perbandingan Akurasi](https://github.com/arubhasy/gym_member_clf/blob/main/Accuracy.png)
+![image](https://github.com/user-attachments/assets/f20b32ba-65a9-432c-9f0c-49b734aaf927)
 
 Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
 
@@ -395,8 +390,7 @@ Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli perform
 Feature importance membantu dalam memahami fitur yang memiliki pengaruh besar terhadap model.
 
 Berikut Feature Importance model Decision Tree Classifier:
-
-![Feature Importance DT](https://github.com/arubhasy/gym_member_clf/blob/main/Feature%20Importance%20DT.png)
+![image](https://github.com/user-attachments/assets/43de2143-b7bd-4e82-8f56-1e6d76b9e754)
 
 Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
 - `Workout_Type`
@@ -404,8 +398,7 @@ Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
 - `Resting_BPM`
 
 Berikut Feature Importance model Gradient Boosting Classifier:
-
-![Feature Importance GB](https://github.com/arubhasy/gym_member_clf/blob/main/Feature%20Importance%20GB.png)
+![image](https://github.com/user-attachments/assets/a5b55c14-b23a-4548-b5bb-f53aa4d367c0)
 
 Pada model GB Classifier, top 3 fitur yang memiliki pengaruh besar:
 - `Water_Intake`
