@@ -136,7 +136,12 @@ Setelah pengecekan, tidak ditemukan nilai hilang dan duplikasi.
 Pada variabel dg tipe data objek dan kategorik, tidak ditemukan anomali.
 
 **Outlier**
-Pada variabel dg tipe data numerik, ditemukan outlier melalui visualisasi box plot.
+Pada variabel dg tipe data numerik,  ditemukan outlier pada 3 variabel:
+- `Weights`
+- `Calories_Burned`
+- `BMI`
+
+Berikut visualisasi box plot yang menunjukkan nilai outlier pada ketiga variabel tersebut:
 
 Box Plot Variabel `Weights`:
 
@@ -149,11 +154,6 @@ Box Plot Variabel `Calories_Burned`:
 Box Plot Variabel `BMI`:
 
 ![image](https://github.com/user-attachments/assets/67eb1e27-a2d4-4edb-ab65-a2791dfeecb4)
-
-Persentase outlier pada setiap variabel adalah sbb:
-- Outlier pada variabel `Weights` = 0.92%
-- Outlier pada variabel `Calories_Burned` = 1.03%
-- Outlier pada variabel `BMI` = 2.57%
 
 ### **Analisis Korelasi**
 
@@ -175,18 +175,50 @@ Meskipun korelasi tinggi tidak selalu berarti terdapat hubungan sebab-akibat, ta
 ## **4. Data Preparation**
 
 Pada tahap ini dilakukan persiapan data sebelum digunakan untuk membangun model klasifikasi. Beberapa langkah yang dilakukan pada tahap ini adalah:
-1. Encoding data objek dan kategorik
-2. Pisahkan variabel X dan Y (target)
-3. Normalisasi data numerik
-4. Splitting data
+1. Perubahan nama kolom*
+2. Penghapusan nilai outlier
+3. Encoding data objek dan kategorik*
+4. Pisahkan variabel X dan Y (target)
+5. Normalisasi data numerik
+6. Splitting data
+
+*) Keterangan:
+Tahapan data preperation yang telah dilakukan pada bagian sebelumnya.
+
+### Perubahan nama kolom
+Perubahan nama kolom dilakukan agar nama kolom menjadi lebih singkat tanpa mengubah makna.
+
+Berikut ringkasan perubahan nama kolom yang telah dilakukan sebelumnya:
+
+| Nama Kolom Awal                 | Nama Kolom Setelah Diubah |
+|---------------------------------|---------------------------|
+| `Weight (kg)`                   | `Weight`                  |
+| `Height (m)`                    | `Height`                  |
+| `Session_Duration (hours)`      | `Session_Duration`        |
+| `Water_Intake (liters)`         | `Water_Intake`            |
+| `Workout_Frequency (days/week)` | `Workout_Frequency`       |
+
+### Penghapusan nilai outlier
+
+Berdasarkan pengecekan anomali data numerik melalui visualisasi box plot, terdapat outlier pada variabel: `Weight`, `Calories_Burned`, dan `BMI`.
+
+Adapun persentase outlier pada setiap variabel adalah sbb:
+- Outlier pada variabel `Weights` = 0.92%
+- Outlier pada variabel `Calories_Burned` = 1.03%
+- Outlier pada variabel `BMI` = 2.57%
+
+Karena persentase outlier cenderung kecil, maka untuk penanganan outlier dilakukan dengan cara menghapus nilainya.
+
+Hasil setelah drop nilai outlier:
+Terdapat **948 entri data** setelah penghapusan nilai outlier dari semula 973 entri. Artinya terdapat 25 entri yang didrop.
 
 ### Encoding data objek dan kategorik
 
 Encoding bertujuan untuk mengubah data objek dan kategorik menjadi numerik agar dapat diproses oleh algoritma machine learning.
 
-Langkah ini sudah dilakukan pada bagian analisis korelasi karena untuk menganalisis korelasi antar variabel, harus dilakukan encoding terlebih dahulu.
+Langkah ini telah dilakukan pada bagian sebelumnya karena untuk menganalisis korelasi antar variabel, harus dilakukan encoding terlebih dahulu.
 
-Variabel yang telah dilakukan encoding menjadi numerik:
+Berikut ringkasan variabel yang sebelumnya telah dilakukan encoding menjadi numerik:
 - `Gender`
 - `Workout_Type`
 - `Workout_Frequency`
