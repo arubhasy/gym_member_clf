@@ -66,6 +66,8 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 
 Untuk lebih memahami distribusi data numerik, berikut visualisasi data numeriknya:
 ![Visualisasi Data Numerik](https://github.com/arubhasy/gym_member_clf/blob/main/Distribusi%20Data%20Numerik.png)
+![image](https://github.com/user-attachments/assets/14168e67-ad4a-414c-b71d-a256c346057e)
+
 
 Dari histogram, terlihat beberapa variabel yg memiliki distribusi normal dan miring (skew).
 
