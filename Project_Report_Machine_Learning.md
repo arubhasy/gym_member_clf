@@ -363,12 +363,10 @@ Berikut adalah penjelasan parameter yang digunakan pada ketiga model:
 | Decision Tree Classifier | `criterion='gini'`            | Menggunakan Gini Index untuk pemisahan data.                        |
 |                          | `max_depth=3`                 | Membatasi kedalaman pohon menjadi 3 untuk mencegah overfitting.     |
 |                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
-|--------------------------|-------------------------------|---------------------------------------------------------------------|
 | Gradient Boosting        | `n_estimators=100`            | Jumlah pohon dalam ensemble.                                        |
 |                          | `learning_rate=0.1`           | Mengontrol kontribusi masing-masing pohon terhadap model akhir.     |
 |                          | `max_depth=3`                 | Kedalaman maksimum setiap pohon.                                    |
 |                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
-|--------------------------|-------------------------------|---------------------------------------------------------------------|
 | Neural Network (MLP)     | `hidden_layer_sizes=(64, 32)` | Dua lapisan tersembunyi dengan 64 dan 32 neuron masing-masing.      |
 |                          | `activation='relu'`           | Fungsi aktivasi untuk menangkap hubungan non-linear.                |
 |                          | `max_iter=500`                | Jumlah iterasi maksimum untuk pelatihan model.                      |
@@ -388,14 +386,14 @@ Pada tahap ini akan dilakukan evaluasi terhadap performa dari model Decision Tre
 
 Berikut adalah perbandingan visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
-![image](https://github.com/user-attachments/assets/aaa5acd8-f3b8-4285-861f-785224b9f4e0)
+![image](https://github.com/user-attachments/assets/9611a5ac-d9f1-4b4c-9aea-750fef50cea1)
 
-![image](https://github.com/user-attachments/assets/a7a90e7d-415f-40e1-9001-b4944fa8fad0)
+![image](https://github.com/user-attachments/assets/cbab6e60-bee6-4553-a6d0-dd6fde00de90)
 
-![image](https://github.com/user-attachments/assets/a9d256dc-d66d-4a7a-a93e-bb6f7edb33ba)
+![image](https://github.com/user-attachments/assets/1eb33abb-ebcd-4a5f-8bfc-e9eb864e146d)
 
 Berdasarkan perbandingan ketiga confusion matriks, dapat dilihat bahwa:
-- DT Classifier melakukan prediksi secara benar sebanyak 158 dan salah prediksi sebanyak 32.
+- DT Classifier melakukan prediksi secara benar sebanyak 149 dan salah prediksi sebanyak 41.
 - GB Classifier melakukan prediksi secara benar sebanyak 171 dan salah prediksi sebanyak 19.
 - MLP Classifier melakukan prediksi secara benar sebanyak 161 dan salah prediksi sebanyak 29.
 
@@ -406,9 +404,9 @@ Berikut adalah hasil evaluasi ketiga model:
 
 | Model                    | Accuracy | Macro Avg F1-Score |
 |--------------------------|----------|--------------------|
-| Decision Tree Classifier | 0.87     | 0.89               |
-| Gradient Boosting        | **0.91** | **0.92**           |
-| Neural Network (MLP)     | 0.88     | 0.90               |
+| Decision Tree Classifier | 0.78     | 0.82               |
+| Gradient Boosting        | **0.90** | **0.92**           |
+| Neural Network (MLP)     | 0.85     | 0.87               |
 
 Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Gradient Boosting memiliki performa terbaik dibandingkan kedua model lainnya.
 
@@ -450,8 +448,8 @@ Neural Network (seperti MLP) tidak secara langsung memberikan metrik pentingnya 
 ### **Perbandingan Kinerja Model**
 
 **1. Decision Tree Classifier**
-   - Accuracy: 0.83
-   - Macro Avg F1-Score: 0.86
+   - Accuracy: 0.78
+   - Macro Avg F1-Score: 0.82
    - Kelebihan:
       - Kinerja sangat baik pada kelas minoritas (kelas 2) dengan F1-Score 1.00.
    - Kekurangan:
