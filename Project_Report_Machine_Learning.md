@@ -243,7 +243,8 @@ Eksperimen ini menggunakan 80/20 splitting ratio, berarti splitting 80% dataset 
 
 ### Kondisi Dataset Setelah Data Preparation
 Setelah semua langkah di atas, dataset sudah siap untuk digunakan dalam proses pemodelan:
-- Data sudah bersih (tidak ada missing values, duplicate values, anomali dan outlier).
+- Nama kolom sudah disederhanakan.
+- Data sudah bersih (tidak ada outlier).
 - Data objek dan kategorik sudah diencoding menjadi numerik.
 - Data X (fitur) dan y (target) sudah dipisahkan.
 - Fitur numerik telah dinormalisasi.
@@ -253,11 +254,14 @@ Setelah semua langkah di atas, dataset sudah siap untuk digunakan dalam proses p
 
 ## **5. Modeling**
 
-### **Model yang Digunakan**
+Pada bagian ini akan dilakukan pembangunan model klasifikasi.
+
 Pada project ini kita gunakan 3 model klasifikasi berikut:
 1. Decision Tree Classifier
 2. Gradient Boosting Classifier
 3. Neural Network (MLP)
+
+Berikut akan diuraikan konsep dari ketiga model klasifikasi dan parameter yang digunakan dalam membangun model.
 
 ### Decision Tree Classifier
 Decision Tree Classifier adalah algoritma machine learning berbasis pohon yang digunakan untuk menyelesaikan masalah klasifikasi dengan memisahkan dataset ke dalam subset berdasarkan aturan keputusan (decision rules). Model ini membangun struktur pohon dari atas ke bawah melalui proses pembagian fitur (splitting) yang optimal.
@@ -414,11 +418,12 @@ Berikut adalah penjelasan parameter yang digunakan pada ketiga model:
 ---
 
 ## **6. Evaluation**
+
 Pada tahap ini akan dilakukan evaluasi terhadap performa dari model Decision Tree Classifier, Gradient Boosting, dan MLP menggunakan:
-- Confusion Matrix
-- Nilai accuaracy dan macro average F1-Score
-- Visualisasi accuaracy dan macro average F1-Score
-- Feature Importance
+1. Confusion Matrix
+2. Nilai accuaracy dan macro average F1-Score
+3. Visualisasi accuaracy dan macro average F1-Score
+4. Feature Importance
 
 ### **Confusion Matrix**
 
@@ -482,7 +487,9 @@ Neural Network (seperti MLP) tidak secara langsung memberikan metrik pentingnya 
 
 ## **7. Kesimpulan**
 
-### **Perbandingan Kinerja Model**
+Bagian ini merupakan berisi kesimpulan dari proyek klasifikasi dan usulan rekomendasi untuk peningkatan.
+
+### ** Ringkasan Perbandingan Kinerja Model**
 
 **1. Decision Tree Classifier**
    - Accuracy: 0.78
