@@ -355,6 +355,9 @@ Kelemahan MLP Classifier
 - Memerlukan Normalisasi Data: MLP sensitif terhadap skala fitur.
 - Tuning Parameter: Perlu hyperparameter tuning seperti jumlah hidden layers dan learning rate untuk performa optimal.
 
+### **Parameter yang digunakan**
+Berikut adalah penjelasan parameter yang digunakan pada ketiga model:
+
 ---
 
 ## **6. Evaluation**
