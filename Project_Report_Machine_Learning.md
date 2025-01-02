@@ -36,6 +36,14 @@ Kesehatan dan kebugaran merupakan aspek penting dalam kehidupan. Bagi masyarakat
 
 ## **3. Data Understanding**
 
+Pada bagian kita mulai dengan memahami karakteristik data. Setelah data loading, ada beberapa langkah yang akan dilakukan:
+1. Telaah variabel dan tipe data
+2. Telaah data numerik
+3. Telaah data objek dan kategorik
+4. Cek nilai hilang dan duplikat
+5. Cek anomali data
+6. Analisis korelasi
+
 ### **Informasi Dataset**
 - **Dataset**: [Gym Members Exercise Dataset (Kaggle)](https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset).
 - **Jumlah Data**:
@@ -166,50 +174,48 @@ Meskipun korelasi tinggi tidak selalu berarti terdapat hubungan sebab-akibat, ta
 
 ## **4. Data Preparation**
 
-### **Langkah-Langkah**
-1. **Handling Missing Values**
-2. **Handling Duplicate Values**
-3. **Handling Outlier**
-4. **Encoding Variabel Kategorik**
-5. **Normalisasi Data Numerik**
-6. **Data Splitting**
-7. **Finalisasi Data**
+Pada tahap ini dilakukan persiapan data sebelum digunakan untuk membangun model klasifikasi. Beberapa langkah yang dilakukan pada tahap ini adalah:
+1. Encoding data objek dan kategorik
+2. Pisahkan variabel X dan Y (target)
+3. Normalisasi data numerik
+4. Splitting data
 
-### Handling Missing Values
-Pastikan dataset tidak memiliki missing values atau tidak ada nilai yang kosong (NaN). Berdasarkan hasil telaah data, tidak ditemukan missing values. Dengan demikian, penanganan missing values tidak dilakukan.
+### Encoding data objek dan kategorik
 
-### Handling Duplicate Values
-Pastikan dataset tidak memiliki duplicate values atau duplikasi entri data. Berdasarkan hasil telaah data, tidak ditemukan duplicate values. Dengan demikian, penanganan duplicate values tidak dilakukan.
+Encoding bertujuan untuk mengubah data objek dan kategorik menjadi numerik agar dapat diproses oleh algoritma machine learning.
 
-### Handling Outliers
-Berdasarkan telaah data, terdapat outlier pada variabel:
-- Outlier pada variabel `Weights` = 0.92%
-- Outlier pada variabel `Calories_Burned` = 1.03%
-- Outlier pada variabel `BMI` = 2.57%
+Langkah ini sudah dilakukan pada bagian analisis korelasi karena untuk menganalisis korelasi antar variabel, harus dilakukan encoding terlebih dahulu.
 
-Karena outlier secara persentase cukup kecil, maka diputuskan untuk menghapus nilai outlier pada ketiga variabel tersebut. Setelah drop outlier, terdapat 948 entri data dari semula 973 entri. Artinya terdapat 25 entri yang didrop.
-
-### Encoding Variabel Kategorik
-Encoding bertujuan untuk mengubah variabel kategorikal menjadi format numerik agar dapat diproses oleh algoritma machine learning. Terdapat 2 variabel yang dikonversi menjadi numerik:
+Variabel yang telah dilakukan encoding menjadi numerik:
 - `Gender`
 - `Workout_Type`
+- `Workout_Frequency`
+- `Experience_Level`
 
-Setelah proses encoding, kondisi data seluruhnya berubah menjadi numerik.
+### Pemisahan variabel X (fitur) dan y (target)
+Pemisahan dilakukan untuk menyiapkan data fitur (X) dan target (y) sebelum dilakukan splitting data training dan test yang digunakan dalam pemodelan.
+
+Data y (target) diambil dari `Experience_Level` karena ini adalah target yang ingin diprediksi pada proyek. 14 Variabel lainnya dijadikan data X (fitur).
 
 ### Normalisasi Data Numerik
-Setelah seluruh tipe data dikonversi menjadi numerik, selanjutnya dilakukan normalisasi agar semua fitur numerik memiliki skala yang seragam. Menggunakan **StandarScaler**, seluruh data diubah ke distribusi dengan rata-rata 0 dan deviasi standar 1. Hal ini dilakukan agar dapat mempercepat proses pelatihan model dan mencegah fitur dengan nilai besar mendominasi perhitungan.
+Normalisasi bertujuan untuk menstandarkan skala variabel numerik.
 
-### Data Splitting
-Splitting bertujuan untuk membagi dataset menjadi data training dan testing untuk memastikan evaluasi yang adil. Setelah melakukan pemisahan antara fitur (X) dan variabel target (y), dataset dibagi menjadi dua bagian: data training (80%) dan data testing (20%). 
+**StandarScaler** digunakan agar seluruh data diubah ke distribusi dengan rata-rata 0 dan deviasi standar 1. 
 
-Data training digunakan untuk melatih model dan data testing digunakan untuk mengukur performa model terhadap data baru. Hal ini perlu dilakukan untuk memastikan model dapat dievaluasi pada data yang belum pernah dilihat sebelumnya untuk menghindari overfitting (model hanya bekerja baik pada data training tetapi buruk pada data baru).
+Hal ini dilakukan agar dapat mempercepat proses pelatihan model dan mencegah fitur dengan nilai besar mendominasi perhitungan.
 
-### Finalisasi Data
+### Splitting Data
+Splitting data bertujuan untuk membagi dataset menjadi data training dan testing agar performa model dapat dievaluasi secara fair.
+
+Eksperimen ini menggunakan 80/20 splitting ratio, berarti splitting 80% dataset untuk data training dan 20% untuk data testing.
+
+### Kondisi Dataset Setelah Data Preparation
 Setelah semua langkah di atas, dataset sudah siap untuk digunakan dalam proses pemodelan:
 - Data sudah bersih (tidak ada missing values, duplicate values, anomali dan outlier).
+- Data objek dan kategorik sudah diencoding menjadi numerik.
+- Data X (fitur) dan y (target) sudah dipisahkan.
 - Fitur numerik telah dinormalisasi.
-- Variabel kategorikal telah di-encode.
-- Data training dan testing telah dipisahkan.
+- Data training dan testing telah dibagi dengan 80/20 splitting ratio.
 
 ---
 
