@@ -355,8 +355,25 @@ Kelemahan MLP Classifier
 - Memerlukan Normalisasi Data: MLP sensitif terhadap skala fitur.
 - Tuning Parameter: Perlu hyperparameter tuning seperti jumlah hidden layers dan learning rate untuk performa optimal.
 
-### **Parameter yang digunakan**
+### **Ringkasan Parameter yang Digunakan**
 Berikut adalah penjelasan parameter yang digunakan pada ketiga model:
+
+| Model                    | Parameter                     | Deskripsi                                                           |
+|--------------------------|-------------------------------|---------------------------------------------------------------------|
+| Decision Tree Classifier | `criterion='gini'`            | Menggunakan Gini Index untuk pemisahan data.                        |
+|                          | `max_depth=3`                 | Membatasi kedalaman pohon menjadi 3 untuk mencegah overfitting.     |
+|                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
+|--------------------------|-------------------------------|---------------------------------------------------------------------|
+| Gradient Boosting        | `n_estimators=100`            | Jumlah pohon dalam ensemble.                                        |
+|                          | `learning_rate=0.1`           | Mengontrol kontribusi masing-masing pohon terhadap model akhir.     |
+|                          | `max_depth=3`                 | Kedalaman maksimum setiap pohon.                                    |
+|                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
+|--------------------------|-------------------------------|---------------------------------------------------------------------|
+| Neural Network (MLP)     | `hidden_layer_sizes=(64, 32)` | Dua lapisan tersembunyi dengan 64 dan 32 neuron masing-masing.      |
+|                          | `activation='relu'`           | Fungsi aktivasi untuk menangkap hubungan non-linear.                |
+|                          | `max_iter=500`                | Jumlah iterasi maksimum untuk pelatihan model.                      |
+|                          | `max_iter=500`                | Jumlah iterasi maksimum untuk pelatihan model.                      |
+|                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
 
 ---
 
