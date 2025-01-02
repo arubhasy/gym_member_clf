@@ -459,7 +459,7 @@ Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Grad
 
 Berikut adalah visualisasi perbandingan accuracy dan macro average F1-Score model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
-![image](https://github.com/user-attachments/assets/7c194a6a-4913-4ea7-8361-eadef5efcfeb)
+![image](https://github.com/user-attachments/assets/92483684-0411-4101-801d-2fa92353edd8)
 
 Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
 
@@ -468,20 +468,19 @@ Feature importance membantu dalam memahami fitur yang memiliki pengaruh besar te
 
 Berikut Feature Importance model Decision Tree Classifier:
 
-![image](https://github.com/user-attachments/assets/e6bcec3f-0fe5-4cdf-b6e7-9b6506b4eb57)
+![image](https://github.com/user-attachments/assets/c0a7177a-f040-4b37-a6f6-09019f0c068a)
 
-Pada model DT Classifier, top 3 fitur yang memiliki pengaruh besar:
-- `Workout_Type`
+Pada model DT Classifier, fitur yang memiliki pengaruh besar:
+- `Resting_BPM`
 - `Water_Intake`
 
 Berikut Feature Importance model Gradient Boosting Classifier:
 
 ![image](https://github.com/user-attachments/assets/a5b55c14-b23a-4548-b5bb-f53aa4d367c0)
 
-Pada model GB Classifier, top 3 fitur yang memiliki pengaruh besar:
-- `Water_Intake`
+Pada model GB Classifier, fitur yang memiliki pengaruh besar:
 - `Resting_BPM`
-- `Workout_Type`
+- `Water_Intake`
 
 Neural Network (seperti MLP) tidak secara langsung memberikan metrik pentingnya fitur (feature importance) karena struktur jaringannya berbasis lapisan tersembunyi (hidden layers) dengan bobot dan bias yang terdistribusi di antara banyak unit
 
