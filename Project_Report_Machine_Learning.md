@@ -161,11 +161,11 @@ Korelasi mengukur hubungan linear antara dua variabel, baik hubungan yang positi
 
 Setelah seluruh variabel bertipe numerik, selanjutnya kita hitung matriks korelasinya dan divisualisasikan menggunakan heatmap:
 
-![image](https://github.com/user-attachments/assets/3358b8d6-906b-4359-9466-19f4ffa66d00)
+![image](https://github.com/user-attachments/assets/4cb8a522-c274-41ae-b724-7f3eda790034)
 
 Berikut terdapat beberapa insight yang menarik berdasarkan interpretasi matriks korelasi:
-- `Weight` memiliki korelasi positif yang sangat kuat dengan `BMI` (0.83), artinya semakin tinggi berat badan akan semakin tinggi juga BMI.
 - `Experience_Level` memiliki korelasi positif yang sangat kuat dengan `Workout_Frequency` (0.84), artinya semakin berpengalaman seseorang di gym akan semakin tinggi frekuensi latihannya.
+- `Weight` memiliki korelasi positif yang sangat kuat dengan `BMI` (0.85), artinya semakin tinggi berat badan akan semakin tinggi juga BMI.
 - `Session_Duration` memiliki korelasi positif yang sangat kuat dengan `Calories_Burned` (0.91), artinya semakin lama durasi workout akan semakin banyak kalori yang terbakar.
 
 Meskipun korelasi tinggi tidak selalu berarti terdapat hubungan sebab-akibat, tapi di sini kita dapat memperoleh insight yang cukup berharga dari data.
@@ -406,7 +406,6 @@ Berikut adalah penjelasan parameter yang digunakan pada ketiga model:
 |                          | `max_depth=3`                 | Membatasi kedalaman pohon menjadi 3 untuk mencegah overfitting.     |
 |                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
 | Gradient Boosting        | `n_estimators=100`            | Jumlah pohon dalam ensemble.                                        |
-|                          | `learning_rate=0.1`           | Mengontrol kontribusi masing-masing pohon terhadap model akhir.     |
 |                          | `max_depth=3`                 | Kedalaman maksimum setiap pohon.                                    |
 |                          | `random_state=42`             | Menjaga konsistensi hasil eksperimen.                               |
 | Neural Network (MLP)     | `hidden_layer_sizes=(64, 32)` | Dua lapisan tersembunyi dengan 64 dan 32 neuron masing-masing.      |
@@ -431,11 +430,11 @@ Confusion matrix dari setiap model dibandingkan untuk membantu memahami bagaiman
 
 Berikut adalah visualisasi confusion matrix model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
-![image](https://github.com/user-attachments/assets/9611a5ac-d9f1-4b4c-9aea-750fef50cea1)
+![image](https://github.com/user-attachments/assets/fae73876-777d-452f-a624-788e8b681b78)
 
-![image](https://github.com/user-attachments/assets/cbab6e60-bee6-4553-a6d0-dd6fde00de90)
+![image](https://github.com/user-attachments/assets/c835d64f-7d4f-4361-bc32-f408d5815066)
 
-![image](https://github.com/user-attachments/assets/1eb33abb-ebcd-4a5f-8bfc-e9eb864e146d)
+![image](https://github.com/user-attachments/assets/eede9f1d-22ad-46c5-bbd2-b7734d41473c)
 
 Berdasarkan perbandingan ketiga confusion matriks, dapat dilihat bahwa:
 - DT Classifier melakukan prediksi secara benar sebanyak 149 dan salah prediksi sebanyak 41.
@@ -459,7 +458,7 @@ Berdasarkan perhitungan akurasi dan macro average (F1-score), dapat dilihat Grad
 
 Berikut adalah visualisasi perbandingan accuracy dan macro average F1-Score model Decision Tree Classifier, Gradient Boosting, dan MLP:
 
-![image](https://github.com/user-attachments/assets/92483684-0411-4101-801d-2fa92353edd8)
+![image](https://github.com/user-attachments/assets/3ace4b70-c94f-41b1-a363-750657b7a8e6)
 
 Secara visual dapat dilihat bahwa performa Gradient Boosting mengungguli performa kedua model lainnya.
 
@@ -468,21 +467,22 @@ Feature importance membantu dalam memahami fitur yang memiliki pengaruh besar te
 
 Berikut Feature Importance model Decision Tree Classifier:
 
-![image](https://github.com/user-attachments/assets/c0a7177a-f040-4b37-a6f6-09019f0c068a)
+![image](https://github.com/user-attachments/assets/3ad67ae4-5486-4784-a6b0-c7763b6c24b2)
 
 Pada model DT Classifier, fitur yang memiliki pengaruh besar:
-- `Resting_BPM`
+- `Workout_Type`
 - `Water_Intake`
 
 Berikut Feature Importance model Gradient Boosting Classifier:
 
-![image](https://github.com/user-attachments/assets/a5b55c14-b23a-4548-b5bb-f53aa4d367c0)
+![image](https://github.com/user-attachments/assets/703694b8-7d38-462d-87ec-ef2658141a95)
 
 Pada model GB Classifier, fitur yang memiliki pengaruh besar:
+- `Water_Intake`
 - `Resting_BPM`
 - `Water_Intake`
 
-Neural Network (seperti MLP) tidak secara langsung memberikan metrik pentingnya fitur (feature importance) karena struktur jaringannya berbasis lapisan tersembunyi (hidden layers) dengan bobot dan bias yang terdistribusi di antara banyak unit
+Model Neural Network (MLP) tidak dilakukan penghitungan feature importance karena model tidak secara langsung memberikan metrik pentingnya fitur mengingat struktur jaringannya berbasis lapisan tersembunyi (hidden layers) dengan bobot dan bias yang terdistribusi di antara banyak unit.
 
 ---
 
@@ -519,7 +519,7 @@ Bagian ini merupakan berisi kesimpulan dari proyek klasifikasi dan usulan rekome
       - Kinerja keseluruhan sedikit lebih rendah dibanding Gradient Boosting.
 
 ### **Kesimpulan**
-Model terbaik adalah Gradient Boosting Classifier karena:
+Model terbaik adalah **Gradient Boosting Classifier** karena:
 - Memiliki akurasi tertinggi (0.90).
 - Memiliki macro average F1-Score tertinggi (0.92).
 - Konsistensi kinerjanya tinggi di semua kelas.
